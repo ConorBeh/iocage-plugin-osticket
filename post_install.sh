@@ -42,7 +42,7 @@ rm -rf staging
 cp /usr/local/www/data/include/ost-sampleconfig.php /usr/local/www/data/include/ost-config.php
 chmod 0666 /usr/local/www/data/include/ost-config.php
 
-# Drop some info in the terminal/UI
+# Drop the database name, username, and randomly generated password in the CLI and UI (coming soon) 
 echo "Database Name: $DB" > /root/PLUGIN_INFO
 echo "Database User: $USER" >> /root/PLUGIN_INFO
 echo "Database Password: $PASS" >> /root/PLUGIN_INFO
