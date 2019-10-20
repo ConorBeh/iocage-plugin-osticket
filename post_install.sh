@@ -30,7 +30,7 @@ GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 
-# Fetch osticket
+# Fetch osTicket
 fetch https://github.com/osTicket/osTicket/releases/download/v1.12.3/osTicket-v1.12.3.zip
 mkdir staging
 unzip -d staging osTicket-v1.12.3.zip 
