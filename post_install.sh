@@ -38,11 +38,11 @@ mkdir -p /usr/local/www/data
 mv staging/upload/* /usr/local/www/data/
 mv staging/scripts /usr/local/www/data/
 rm -rf staging
+# Prep for setup
+cp /usr/local/www/data/include/ost-sampleconfig.php /usr/local/www/data/include/ost-config.php
+chmod 0666 /usr/local/www/data/include/ost-config.php
 
-
-
-
-
+# Drop some info in the terminal/UI
 echo "Database Name: $DB" > /root/PLUGIN_INFO
 echo "Database User: $USER" >> /root/PLUGIN_INFO
 echo "Database Password: $PASS" >> /root/PLUGIN_INFO
