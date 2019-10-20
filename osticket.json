@@ -1,0 +1,33 @@
+{
+    "name": "osticket-test",
+    "plugin_schema": "2",
+    "release": "11.2-RELEASE",
+    "artifact": "https://github.com/RogerAirgood/iocage-plugin-osticket.git",
+    "pkgs": [
+        "mariadb104-server",
+		"lighttpd",
+		"php73",
+		"php73-xml",
+		"php73-dom",
+		"php73-json",
+		"php73-mbstring",
+		"php73-phar",
+		"php73-imap",
+		"php73-mysqli",
+		"php73-gd",
+		"php73-session",
+		"php73-filter",
+		"libgd",
+		"ca_root_nss"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": "0"
+}
