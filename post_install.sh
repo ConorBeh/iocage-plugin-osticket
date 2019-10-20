@@ -1,5 +1,6 @@
 #!/bin/sh
-
+echo Hello
+: '
 sysrc -f /etc/rc.conf lighttpd_enable="YES"
 sysrc -f /etc/rc.conf mysql_enable="YES"
 sysrc -f /etc/rc.conf php_fpm_enable="YES"
@@ -51,5 +52,4 @@ echo "Database Name: $DB"
 echo "Database User: $USER" 
 echo "Database Password: $PASS" 
 echo "To view this information again, check /root/PLUGIN_INFO"
-
-
+'
