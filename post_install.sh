@@ -1,16 +1,18 @@
 #!/bin/sh
 
+# Enable and start services
 sysrc -f /etc/rc.conf lighttpd_enable="YES"
+service lighttpd start 2>/dev/null
 sysrc -f /etc/rc.conf mysql_enable="YES"
+service mysql-server start 2>/dev/null
 sysrc -f /etc/rc.conf php_fpm_enable="YES"
 service php-fpm start 2>/dev/null
-service mysql-server start 2>/dev/null
-service lighttpd start 2>/dev/null
 
+# Set variables for username and database name
 USER="dbadmin"
 DB="osTicket"
 
-# Save the config values
+# Save the config values and generate a random password 
 echo "$DB" > /root/dbname
 echo "$USER" > /root/dbuser
 export LC_ALL=C
