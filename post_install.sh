@@ -32,7 +32,7 @@ GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 
-# Fetch osTicket
+# Fetch osTicket, unzip into a staging directory, move files into the webserver directory
 fetch https://github.com/osTicket/osTicket/releases/download/v1.12.3/osTicket-v1.12.3.zip
 mkdir staging
 unzip -d staging osTicket-v1.12.3.zip 
